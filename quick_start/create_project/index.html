@@ -1,0 +1,1034 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pypipet.github.io/quick_start/create_project/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
+    
+    
+      
+        <title>quick start - PyPipet Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a617204b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="green">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-new-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PyPipet Docs" class="md-header__button md-logo" aria-label="PyPipet Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PyPipet Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              quick start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pypipet/pypipet.github.io.git/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PyPipet Docs" class="md-nav__button md-logo" aria-label="PyPipet Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PyPipet Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pypipet/pypipet.github.io.git/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        PyPipet
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        Contributions Guide
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Quick Start
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quick Start" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Quick Start
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dependencies/" class="md-nav__link">
+        dependencies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          start a project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        start a project
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-project" class="md-nav__link">
+    Create new project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-setting-files" class="md-nav__link">
+    Customize setting files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialize-project" class="md-nav__link">
+    Initialize Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-product-catalog" class="md-nav__link">
+    Import Product Catalog
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Product Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-import-from-file" class="md-nav__link">
+    option 1: import from file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-import-from-shop" class="md-nav__link">
+    option 2: import from shop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-product-information" class="md-nav__link">
+    update product information
+  </a>
+  
+    <nav class="md-nav" aria-label="update product information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-product-infomation" class="md-nav__link">
+    show product infomation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-product-information" class="md-nav__link">
+    edit product information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-a-product-to-a-frontshop" class="md-nav__link">
+    launch a product to a frontshop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-management" class="md-nav__link">
+    inventory management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchronize-order" class="md-nav__link">
+    synchronize order
+  </a>
+  
+    <nav class="md-nav" aria-label="synchronize order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synchronize-orders-from-frontshop-to-database" class="md-nav__link">
+    synchronize orders from frontshop to database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-order-information" class="md-nav__link">
+    show order information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-order-status" class="md-nav__link">
+    update order status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-tracking-for-shipment" class="md-nav__link">
+    add tracking for shipment
+  </a>
+  
+    <nav class="md-nav" aria-label="add tracking for shipment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-tracking-for-an-order" class="md-nav__link">
+    add tracking for an order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-add-tracking-for-orders" class="md-nav__link">
+    bulk add tracking for orders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-tracking-information-of-an-order" class="md-nav__link">
+    show tracking information of an order
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-static-data-to-database" class="md-nav__link">
+    import static data to database
+  </a>
+  
+    <nav class="md-nav" aria-label="import static data to database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shops" class="md-nav__link">
+    shops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supplier" class="md-nav__link">
+    supplier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tax" class="md-nav__link">
+    tax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    category
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/project_setting/" class="md-nav__link">
+        project configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/ecommerce_api/" class="md-nav__link">
+        Ecommerce API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms/" class="md-nav__link">
+        Definition of Terms
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-new-project" class="md-nav__link">
+    Create new project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-setting-files" class="md-nav__link">
+    Customize setting files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialize-project" class="md-nav__link">
+    Initialize Project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-product-catalog" class="md-nav__link">
+    Import Product Catalog
+  </a>
+  
+    <nav class="md-nav" aria-label="Import Product Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-import-from-file" class="md-nav__link">
+    option 1: import from file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-import-from-shop" class="md-nav__link">
+    option 2: import from shop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-product-information" class="md-nav__link">
+    update product information
+  </a>
+  
+    <nav class="md-nav" aria-label="update product information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-product-infomation" class="md-nav__link">
+    show product infomation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-product-information" class="md-nav__link">
+    edit product information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-a-product-to-a-frontshop" class="md-nav__link">
+    launch a product to a frontshop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-management" class="md-nav__link">
+    inventory management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchronize-order" class="md-nav__link">
+    synchronize order
+  </a>
+  
+    <nav class="md-nav" aria-label="synchronize order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synchronize-orders-from-frontshop-to-database" class="md-nav__link">
+    synchronize orders from frontshop to database
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-order-information" class="md-nav__link">
+    show order information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-order-status" class="md-nav__link">
+    update order status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-tracking-for-shipment" class="md-nav__link">
+    add tracking for shipment
+  </a>
+  
+    <nav class="md-nav" aria-label="add tracking for shipment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-tracking-for-an-order" class="md-nav__link">
+    add tracking for an order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bulk-add-tracking-for-orders" class="md-nav__link">
+    bulk add tracking for orders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-tracking-information-of-an-order" class="md-nav__link">
+    show tracking information of an order
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-static-data-to-database" class="md-nav__link">
+    import static data to database
+  </a>
+  
+    <nav class="md-nav" aria-label="import static data to database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shops" class="md-nav__link">
+    shops
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supplier" class="md-nav__link">
+    supplier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tax" class="md-nav__link">
+    tax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    category
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/pypipet/pypipet.github.io.git/edit/master/docs/quick_start/create_project.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+  <h1>start a project</h1>
+
+<h3 id="create-new-project">Create new project<a class="headerlink" href="#create-new-project" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">    mkdir my_project_folder
+    cd my_project_folder
+    pypipet new project_name
+</code></pre>
+<p>In current folder</p>
+<pre><code>.
++-- setting.yaml
++-- bundle
+|   +-- db_setting.yaml
+|   +-- file_template.yaml
+|   +-- wc_field_mapping.yaml
+</code></pre>
+<p><strong>Note: run pypipet in the project folder (where the configuration <code>filsetting.yaml</code> is)</strong></p>
+<h3 id="customize-setting-files">Customize setting files<a class="headerlink" href="#customize-setting-files" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>setting.yaml</code> <a href="/configuration/project_setting/">project setting</a></li>
+<li><code>bundle/db_setting.yaml</code> <a href="https://github.com/pypipet/pypipet/blob/main/pypipet/core/default_setting/db_setting.yaml">database auth and schema</a></li>
+<li><code>bundle/file_template.yaml</code> <a href="https://github.com/pypipet/pypipet/blob/main/pypipet/core/default_setting/file_template.yaml">format of template files</a></li>
+<li><code>bundle/wc_field_mapping.yaml</code> <a href="https://github.com/pypipet/pypipet/blob/main/pypipet/core/default_setting/wc_field_mapping.yaml">woocommerce field mapping</a></li>
+</ul>
+<h3 id="initialize-project">Initialize Project<a class="headerlink" href="#initialize-project" title="Permanent link">&para;</a></h3>
+<p><code>pypipet initialize</code></p>
+<p>database will be automatically set up accordiing to <code>bundle/database_setting.yaml</code></p>
+<p>see <a href="">database schema</a></p>
+<h3 id="import-product-catalog">Import Product Catalog<a class="headerlink" href="#import-product-catalog" title="Permanent link">&para;</a></h3>
+<h4 id="option-1-import-from-file">option 1: import from file<a class="headerlink" href="#option-1-import-from-file" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>generate template</p>
+<pre><code>pypipet template frontshop
+pypipet template supplier
+pypipet template tax
+pypipet template product
+</code></pre>
+</li>
+<li>
+<p>fill the data in files (csv files)</p>
+</li>
+<li>
+<p>load the catalog into database</p>
+<pre><code>pypipet static add --target supplier -f supplier_template.csv
+pypipet static add --target supplier -f frontshop_template.csv
+pypipet static add --target supplier -f tax_template.csv
+pypipet catalog file --shop [your_shop_name] -f product_template.csv
+</code></pre>
+<p>refer <code>your_shop_name</code> to shop name in <code>setting.yaml</code> </p>
+</li>
+</ol>
+<h4 id="option-2-import-from-shop">option 2: import from shop<a class="headerlink" href="#option-2-import-from-shop" title="Permanent link">&para;</a></h4>
+<pre><code>    pypipet catalog shop --shop [your_shop_name]
+</code></pre>
+<h3 id="update-product-information">update product information<a class="headerlink" href="#update-product-information" title="Permanent link">&para;</a></h3>
+<h4 id="show-product-infomation">show product infomation<a class="headerlink" href="#show-product-infomation" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet product  show  --shop  [your_shop_name]  --sku  [your_product_sku]
+</code></pre>
+<h4 id="edit-product-information">edit product information<a class="headerlink" href="#edit-product-information" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet product  edit  --shop  [your_shop_name]  -f  product_update_template.csv
+</code></pre>
+<h3 id="launch-a-product-to-a-frontshop">launch a product to a frontshop<a class="headerlink" href="#launch-a-product-to-a-frontshop" title="Permanent link">&para;</a></h3>
+<pre><code>pypipet product  launch  --shop  [your_shop_name]  --sku  [your_product_sku] --price [your_lauch_price]
+</code></pre>
+<h3 id="inventory-management">inventory management<a class="headerlink" href="#inventory-management" title="Permanent link">&para;</a></h3>
+<pre><code>pypipet inventory edit --shop [your_shop_name] -f inventory_template.csv
+</code></pre>
+<h3 id="synchronize-order">synchronize order<a class="headerlink" href="#synchronize-order" title="Permanent link">&para;</a></h3>
+<h4 id="synchronize-orders-from-frontshop-to-database">synchronize orders from frontshop to database<a class="headerlink" href="#synchronize-orders-from-frontshop-to-database" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet order  sync  --shop  home_site
+</code></pre>
+<h4 id="show-order-information">show order information<a class="headerlink" href="#show-order-information" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet order  show  --shop  [your_shop_name]  --id  [your_order_id]
+</code></pre>
+<p><code>your_order_id</code> use frontshop order id</p>
+<h4 id="update-order-status">update order status<a class="headerlink" href="#update-order-status" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet order  status  --shop  [your_shop_name]  --id  [your_order_id] --manual refunded
+</code></pre>
+<h3 id="add-tracking-for-shipment">add tracking for shipment<a class="headerlink" href="#add-tracking-for-shipment" title="Permanent link">&para;</a></h3>
+<h4 id="add-tracking-for-an-order">add tracking for an order<a class="headerlink" href="#add-tracking-for-an-order" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet fulfillment  add  --shop  [your_shop_name]  --order-id  [your_order_id]  --provider  [your_service_provider]  --tracking  [your_tracking_id]
+</code></pre>
+<p><code>your_order_id</code> use frontshop order id</p>
+<p><code>your_service_provider</code> e.g., canada_post,usps, ups, fedex, dhl</p>
+<h4 id="bulk-add-tracking-for-orders">bulk add tracking for orders<a class="headerlink" href="#bulk-add-tracking-for-orders" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet fulfillment  add  --shop  [your_shop_name] -f fulfillment_template.csv
+</code></pre>
+<h4 id="show-tracking-information-of-an-order">show tracking information of an order<a class="headerlink" href="#show-tracking-information-of-an-order" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet fulfillment  show  --shop  [your_shop_name]  --order-id  [your_order_id]
+</code></pre>
+<h3 id="import-static-data-to-database">import static data to database<a class="headerlink" href="#import-static-data-to-database" title="Permanent link">&para;</a></h3>
+<h4 id="shops">shops<a class="headerlink" href="#shops" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet static  add  --target  front_shop  -f  frontshop_template.csv
+</code></pre>
+<h4 id="supplier">supplier<a class="headerlink" href="#supplier" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet static  add  --target  supplier  -f  supplier_template.csv
+</code></pre>
+<h4 id="tax">tax<a class="headerlink" href="#tax" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet static  add  --target  tax  -f  tax_template.csv
+</code></pre>
+<h4 id="category">category<a class="headerlink" href="#category" title="Permanent link">&para;</a></h4>
+<pre><code>pypipet static  add  --target  category  -f  category_template.csv
+</code></pre>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      2021-12-20
+    
+  </small>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../dependencies/" class="md-footer__link md-footer__link--prev" aria-label="Previous: dependencies" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              dependencies
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../configuration/project_setting/" class="md-footer__link md-footer__link--next" aria-label="Next: project configuration" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              project configuration
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Pipet is licensed under the <a href=''>MIT license</a>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.cefbb252.min.js", "version": "0.0.1a"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f8ea78.min.js"></script>
+      
+    
+  </body>
+</html>
