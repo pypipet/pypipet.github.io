@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://pypipet.github.io/quick_start/create_project/">
+        <link rel="canonical" href="https://pypipet.com/quick_start/create_project/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
@@ -43,16 +43,6 @@
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
-
-
-  
-  
-
-
-  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-LW5HH8FPCB"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-LW5HH8FPCB",{page_path:e.pathname})})})</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW5HH8FPCB"></script>
-
 
     
     
@@ -535,10 +525,10 @@
       
         <li class="md-nav__item">
   <a href="#import-static-data-to-database" class="md-nav__link">
-    import static data to database
+    Import static data to database
   </a>
   
-    <nav class="md-nav" aria-label="import static data to database">
+    <nav class="md-nav" aria-label="Import static data to database">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -660,10 +650,59 @@
   
   
   
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          References
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="References" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          References
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../terms/" class="md-nav__link">
+      <a href="../../references/terms/" class="md-nav__link">
         Definition of Terms
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/database/" class="md-nav__link">
+        Database schema
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -901,10 +940,10 @@
       
         <li class="md-nav__item">
   <a href="#import-static-data-to-database" class="md-nav__link">
-    import static data to database
+    Import static data to database
   </a>
   
-    <nav class="md-nav" aria-label="import static data to database">
+    <nav class="md-nav" aria-label="Import static data to database">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -982,11 +1021,13 @@
 <li><code>bundle/wc_field_mapping.yaml</code> <a href="https://github.com/pypipet/pypipet/blob/main/pypipet/core/default_setting/wc_field_mapping.yaml">woocommerce API field mapping</a></li>
 <li><code>bundle/spf_field_mapping.yaml</code> <a href="https://github.com/pypipet/pypipet/blob/main/pypipet/core/default_setting/spf_field_mapping.yaml">shopify API field mapping</a></li>
 </ul>
-<p>Here are <a href="">examples of setting files</a> of project configuration</p>
+<p>Here are <a href="https://github.com/pypipet/pypipet/tree/main/configuration_examples">examples of setting files</a> of project configuration.</p>
+<p>Here are the references to <a href="/configuration/ecommerce_api/">set up shop API.</a></p>
 <h2 id="initialize-project">Initialize Project<a class="headerlink" href="#initialize-project" title="Permanent link">&para;</a></h2>
 <p><code>pypipet initialize</code></p>
-<p>database will be automatically set up accordiing to <code>bundle/database_setting.yaml</code></p>
+<p>database tables are automatically set up accordiing to <code>bundle/database_setting.yaml</code></p>
 <p>see <a href="">database schema</a></p>
+<p><strong>For terms used in Pypipet, please check <a href=""><code>Terms</code></a>.</strong></p>
 <h2 id="import-product-catalog">Import Product Catalog<a class="headerlink" href="#import-product-catalog" title="Permanent link">&para;</a></h2>
 <h4 id="option-1-import-from-file">option 1: import from file<a class="headerlink" href="#option-1-import-from-file" title="Permanent link">&para;</a></h4>
 <ol>
@@ -997,6 +1038,11 @@ pypipet template supplier
 pypipet template tax
 pypipet template product
 </code></pre>
+<p>*notes about template files</p>
+<ul>
+<li>The template are csv files. The column name format is <code>Tablename.Columnname</code>.</li>
+<li>For importing catalog only, ignore the columns with name start with <code>Destination</code></li>
+</ul>
 </li>
 <li>
 <p>fill the data in files (csv files)</p>
@@ -1050,7 +1096,7 @@ pypipet catalog file --shop [your_shop_name] -f product_template.csv
 <h4 id="show-tracking-information-of-an-order">show tracking information of an order<a class="headerlink" href="#show-tracking-information-of-an-order" title="Permanent link">&para;</a></h4>
 <pre><code>pypipet fulfillment  show  --shop  [your_shop_name]  --order-id  [your_order_id]
 </code></pre>
-<h2 id="import-static-data-to-database">import static data to database<a class="headerlink" href="#import-static-data-to-database" title="Permanent link">&para;</a></h2>
+<h2 id="import-static-data-to-database">Import static data to database<a class="headerlink" href="#import-static-data-to-database" title="Permanent link">&para;</a></h2>
 <h4 id="shops">shops<a class="headerlink" href="#shops" title="Permanent link">&para;</a></h4>
 <pre><code>pypipet static  add  --target  front_shop  -f  frontshop_template.csv
 </code></pre>
@@ -1069,7 +1115,7 @@ pypipet catalog file --shop [your_shop_name] -f product_template.csv
   <small>
     
       Last update:
-      2021-12-20
+      2022-02-17
     
   </small>
 </div>
