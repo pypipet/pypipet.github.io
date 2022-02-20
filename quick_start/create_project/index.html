@@ -999,19 +999,19 @@
   <h1>Start a project</h1>
 
 <h2 id="create-new-project">Create new project<a class="headerlink" href="#create-new-project" title="Permanent link">&para;</a></h2>
-<pre><code class="language-bash">    mkdir my_project_folder
-    cd my_project_folder
-    pypipet new project_name
-</code></pre>
-<p>In current folder</p>
-<pre><code>.
-+-- setting.yaml
-+-- bundle
-|   +-- db_setting.yaml
-|   +-- file_template.yaml
-|   +-- wc_field_mapping.yaml
-    +-- spf_field_mapping.yaml
-</code></pre>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>    mkdir my_project_folder
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="nb">cd</span> my_project_folder
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    pypipet new project_name
+</code></pre></div>
+In current folder</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>.
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>+-- setting.yaml
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>+-- bundle
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>|   +-- db_setting.yaml
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>|   +-- file_template.yaml
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>|   +-- wc_field_mapping.yaml
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>    +-- spf_field_mapping.yaml
+</code></pre></div>
 <p><strong>Note: run pypipet in the project folder (where the configuration <code>filsetting.yaml</code> is)</strong></p>
 <h2 id="customize-setting-files">Customize setting files<a class="headerlink" href="#customize-setting-files" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1033,11 +1033,11 @@
 <ol>
 <li>
 <p>generate template</p>
-<pre><code>pypipet template frontshop
+<div class="highlight"><pre><span></span><code>pypipet template frontshop
 pypipet template supplier
 pypipet template tax
 pypipet template product
-</code></pre>
+</code></pre></div>
 <p>*notes about template files</p>
 <ul>
 <li>The template are csv files. The column name format is <code>Tablename.Columnname</code>.</li>
@@ -1049,66 +1049,66 @@ pypipet template product
 </li>
 <li>
 <p>load the catalog into database</p>
-<pre><code>pypipet static add --target supplier -f supplier_template.csv
+<div class="highlight"><pre><span></span><code>pypipet static add --target supplier -f supplier_template.csv
 pypipet static add --target supplier -f frontshop_template.csv
 pypipet static add --target supplier -f tax_template.csv
 pypipet catalog file --shop [your_shop_name] -f product_template.csv
-</code></pre>
+</code></pre></div>
 <p>refer <code>your_shop_name</code> to shop name in <code>setting.yaml</code> </p>
 </li>
 </ol>
 <h4 id="option-2-import-from-shop">option 2: import from shop<a class="headerlink" href="#option-2-import-from-shop" title="Permanent link">&para;</a></h4>
-<pre><code>    pypipet catalog shop --shop [your_shop_name]
-</code></pre>
+<div class="highlight"><pre><span></span><code>    pypipet catalog shop --shop [your_shop_name]
+</code></pre></div>
 <h2 id="update-product-information">update product information<a class="headerlink" href="#update-product-information" title="Permanent link">&para;</a></h2>
 <h4 id="show-product-infomation">show product infomation<a class="headerlink" href="#show-product-infomation" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet product  show  --shop  [your_shop_name]  --sku  [your_product_sku]
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet product  show  --shop  [your_shop_name]  --sku  [your_product_sku]
+</code></pre></div>
 <h4 id="edit-product-information">edit product information<a class="headerlink" href="#edit-product-information" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet product  edit  --shop  [your_shop_name]  -f  product_update_template.csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet product  edit  --shop  [your_shop_name]  -f  product_update_template.csv
+</code></pre></div>
 <h3 id="launch-a-product-to-a-frontshop">launch a product to a frontshop<a class="headerlink" href="#launch-a-product-to-a-frontshop" title="Permanent link">&para;</a></h3>
-<pre><code>pypipet product  launch  --shop  [your_shop_name]  --sku  [your_product_sku] --price [your_lauch_price]
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet product  launch  --shop  [your_shop_name]  --sku  [your_product_sku] --price [your_lauch_price]
+</code></pre></div>
 <h3 id="inventory-management">inventory management<a class="headerlink" href="#inventory-management" title="Permanent link">&para;</a></h3>
-<pre><code>pypipet inventory edit --shop [your_shop_name] -f inventory_template.csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet inventory edit --shop [your_shop_name] -f inventory_template.csv
+</code></pre></div>
 <h2 id="order-management">Order Management<a class="headerlink" href="#order-management" title="Permanent link">&para;</a></h2>
 <h4 id="synchronize-orders-from-frontshop-to-database">synchronize orders from frontshop to database<a class="headerlink" href="#synchronize-orders-from-frontshop-to-database" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet order  sync  --shop  home_site
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet order  sync  --shop  home_site
+</code></pre></div>
 <h4 id="show-order-information">show order information<a class="headerlink" href="#show-order-information" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet order  show  --shop  [your_shop_name]  --id  [your_order_id]
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet order  show  --shop  [your_shop_name]  --id  [your_order_id]
+</code></pre></div>
 <p><code>your_order_id</code> use frontshop order id</p>
 <h4 id="update-order-status">update order status<a class="headerlink" href="#update-order-status" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet order  status  --shop  [your_shop_name]  --id  [your_order_id] --manual refunded
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet order  status  --shop  [your_shop_name]  --id  [your_order_id] --manual refunded
+</code></pre></div>
 <h2 id="add-tracking-for-shipment">Add tracking for shipment<a class="headerlink" href="#add-tracking-for-shipment" title="Permanent link">&para;</a></h2>
 <h4 id="add-tracking-for-an-order">add tracking for an order<a class="headerlink" href="#add-tracking-for-an-order" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet fulfillment  add  --shop  [your_shop_name]  --order-id  [your_order_id]  --provider  [your_service_provider]  --tracking  [your_tracking_id]
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet fulfillment  add  --shop  [your_shop_name]  --order-id  [your_order_id]  --provider  [your_service_provider]  --tracking  [your_tracking_id]
+</code></pre></div>
 <p><code>your_order_id</code> use frontshop order id</p>
 <p><code>your_service_provider</code> e.g., canada_post,usps, ups, fedex, dhl</p>
 <h4 id="bulk-add-tracking-for-orders">bulk add tracking for orders<a class="headerlink" href="#bulk-add-tracking-for-orders" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet fulfillment  add  --shop  [your_shop_name] -f fulfillment_template.csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet fulfillment  add  --shop  [your_shop_name] -f fulfillment_template.csv
+</code></pre></div>
 <h4 id="show-tracking-information-of-an-order">show tracking information of an order<a class="headerlink" href="#show-tracking-information-of-an-order" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet fulfillment  show  --shop  [your_shop_name]  --order-id  [your_order_id]
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet fulfillment  show  --shop  [your_shop_name]  --order-id  [your_order_id]
+</code></pre></div>
 <h2 id="import-static-data-to-database">Import static data to database<a class="headerlink" href="#import-static-data-to-database" title="Permanent link">&para;</a></h2>
 <h4 id="shops">shops<a class="headerlink" href="#shops" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet static  add  --target  front_shop  -f  frontshop_template.csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet static  add  --target  front_shop  -f  frontshop_template.csv
+</code></pre></div>
 <h4 id="supplier">supplier<a class="headerlink" href="#supplier" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet static  add  --target  supplier  -f  supplier_template.csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet static  add  --target  supplier  -f  supplier_template.csv
+</code></pre></div>
 <h4 id="tax">tax<a class="headerlink" href="#tax" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet static  add  --target  tax  -f  tax_template.csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet static  add  --target  tax  -f  tax_template.csv
+</code></pre></div>
 <h4 id="category">category<a class="headerlink" href="#category" title="Permanent link">&para;</a></h4>
-<pre><code>pypipet static  add  --target  category  -f  category_template.csv
-</code></pre>
+<div class="highlight"><pre><span></span><code>pypipet static  add  --target  category  -f  category_template.csv
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">

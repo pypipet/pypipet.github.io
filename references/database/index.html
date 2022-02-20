@@ -630,20 +630,48 @@
 
   <h1>Database schema</h1>
 
+<p><code>bundle/db_setting.yaml</code></p>
 <h2 id="support-ecommerce-business-flow">Support Ecommerce Business Flow<a class="headerlink" href="#support-ecommerce-business-flow" title="Permanent link">&para;</a></h2>
+<p>Pypipet provides a light-weight database schema that is designed and customized to basic Ecommerce functionality, including catalog management, inventory update, product publish, order managment, fulfillment managemaent, etc. The schema is defined with an editable yaml file. You can find the definition of tables and columns here
+<strong><a href="/references/terms/">definitions of PyPipet Terms</a></strong>.</p>
 <p><img alt="PyPipet Schema" src="../../img/shema.png" /></p>
-<p><strong>Here are the <a href="/references/terms/">definitions of PyPipet Terms</a></strong></p>
 <h2 id="customize-schema">Customize Schema<a class="headerlink" href="#customize-schema" title="Permanent link">&para;</a></h2>
-<p>tables and columns</p>
-<p>in product folder <code>bundle/db_setting.yaml</code></p>
-<p>Here are <a href="https://github.com/pypipet/pypipet/tree/main/configuration_examples">examples of setting files</a></p>
+<p>Moreover, the schema can be customized based on ones own need. You can add 
+tables, or edit columns according to your business senario. For example retailers of different products may have a completely different set of attributes to define a product. </p>
+<p>Here are <a href="https://github.com/pypipet/pypipet/tree/main/configuration_examples">examples of setting files</a> for two types of business owners.</p>
+<p>Some of the tables and their columns are mandatory in Pypiet by default. Pypipet validates  the schema when the project is initiated.  </p>
+<ul>
+<li>mandatory tables and columns for validation <a href="https://github.com/pypipet/pypipet/blob/main/pypipet/core/config_service.py">source code</a>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a> <span class="n">table_validation</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>        <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;full_path&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;product_name&#39;</span><span class="p">,</span> <span class="s1">&#39;identifier&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="s1">&#39;front_shop&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;provider&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="s1">&#39;variation&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;sku&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span>  <span class="s1">&#39;product_id&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="s1">&#39;tax&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;country_code&#39;</span><span class="p">,</span> <span class="s1">&#39;default_rate&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;destination_product_id&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>                    <span class="s1">&#39;is_current_price&#39;</span><span class="p">,</span> <span class="s1">&#39;sku&#39;</span><span class="p">,</span> <span class="s1">&#39;front_shop_id&#39;</span><span class="p">,</span> <span class="s1">&#39;available&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="s1">&#39;inventory&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;sku&#39;</span><span class="p">,</span> <span class="s1">&#39;cost&#39;</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span><span class="p">,</span> <span class="s1">&#39;supplier_item_id&#39;</span><span class="p">,</span> <span class="s1">&#39;supplier_id&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>        <span class="s1">&#39;customer&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">,</span><span class="s1">&#39;last_name&#39;</span><span class="p">,</span><span class="s1">&#39;phone&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;address1&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>                    <span class="s1">&#39;address2&#39;</span><span class="p">,</span> <span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;postcode&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>                    <span class="s1">&#39;is_shipping&#39;</span><span class="p">,</span> <span class="s1">&#39;is_billing&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>        <span class="s1">&#39;shop_order&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;destination_order_id&#39;</span><span class="p">,</span> <span class="s1">&#39;front_shop_id&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>                     <span class="s1">&#39;billing_customer_id&#39;</span><span class="p">,</span><span class="s1">&#39;shipping_customer_id&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>                     <span class="s1">&#39;payment_type&#39;</span><span class="p">,</span><span class="s1">&#39;payment_token&#39;</span><span class="p">,</span> <span class="s1">&#39;refund&#39;</span><span class="p">,</span> <span class="s1">&#39;shipping_cost&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>                     <span class="s1">&#39;shipping_tax_id&#39;</span><span class="p">,</span> <span class="s1">&#39;order_total&#39;</span><span class="p">,</span><span class="s1">&#39;order_at&#39;</span><span class="p">,</span><span class="s1">&#39;currency&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>        <span class="s1">&#39;order_item&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;shop_order_id&#39;</span><span class="p">,</span> <span class="s1">&#39;destination_id&#39;</span><span class="p">,</span><span class="s1">&#39;destination_product_id&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>                      <span class="s1">&#39;tax_id&#39;</span><span class="p">,</span> <span class="s1">&#39;order_qty&#39;</span><span class="p">,</span> <span class="s1">&#39;ship_qty&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>        <span class="s1">&#39;fulfillment&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;provider&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;dimension&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">,</span> 
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>                      <span class="s1">&#39;tracking_id&#39;</span><span class="p">,</span> <span class="s1">&#39;shop_order_id&#39;</span><span class="p">,</span> <span class="s1">&#39;destination_order_id&#39;</span><span class="p">]</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="p">}</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-02-18
+      2022-02-19
     
   </small>
 </div>

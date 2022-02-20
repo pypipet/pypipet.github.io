@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pypipet.com/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pypipet.com/about/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pypipet.com/dependencies/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pypipet.com/concept/concept/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pypipet.com/configuration/ecommerce_api/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pypipet.com/configuration/project_setting/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pypipet.com/quick_start/create_project/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pypipet.com/references/database/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pypipet.com/references/terms/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://pypipet.com/usecases/usecases/</loc>
-         <lastmod>2022-02-19</lastmod>
+         <lastmod>2022-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
