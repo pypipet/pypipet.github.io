@@ -43,6 +43,16 @@
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-LW5HH8FPCB"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-LW5HH8FPCB",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW5HH8FPCB"></script>
+
 
     
     
@@ -500,26 +510,6 @@
     variation
   </a>
   
-    <nav class="md-nav" aria-label="variation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sku" class="md-nav__link">
-    sku
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#attribution" class="md-nav__link">
-    attribution
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -557,8 +547,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#product_1" class="md-nav__link">
-    product
+  <a href="#destination_product_id" class="md-nav__link">
+    destination_product_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destination_parent_id" class="md-nav__link">
+    destination_parent_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory_item_id-shopify-only" class="md-nav__link">
+    inventory_item_id (Shopify Only)
   </a>
   
 </li>
@@ -575,6 +579,13 @@
   
     <nav class="md-nav" aria-label="Order">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destination_order_id" class="md-nav__link">
+    destination_order_id
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#order-item" class="md-nav__link">
@@ -599,13 +610,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supplier" class="md-nav__link">
-    supplier
-  </a>
   
 </li>
       
@@ -732,26 +736,6 @@
     variation
   </a>
   
-    <nav class="md-nav" aria-label="variation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sku" class="md-nav__link">
-    sku
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#attribution" class="md-nav__link">
-    attribution
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -789,8 +773,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#product_1" class="md-nav__link">
-    product
+  <a href="#destination_product_id" class="md-nav__link">
+    destination_product_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destination_parent_id" class="md-nav__link">
+    destination_parent_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventory_item_id-shopify-only" class="md-nav__link">
+    inventory_item_id (Shopify Only)
   </a>
   
 </li>
@@ -807,6 +805,13 @@
   
     <nav class="md-nav" aria-label="Order">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destination_order_id" class="md-nav__link">
+    destination_order_id
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#order-item" class="md-nav__link">
@@ -834,13 +839,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#supplier" class="md-nav__link">
-    supplier
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -860,23 +858,38 @@
 
   <h1>Definition of Terms</h1>
 
+<p><img alt="produt variation destination" src="../../img/product.svg" width="400" /> </p>
 <h2 id="product-catalog">Product Catalog<a class="headerlink" href="#product-catalog" title="Permanent link">&para;</a></h2>
-<h3 id="product">product<a class="headerlink" href="#product" title="Permanent link">&para;</a></h3>
-<h3 id="variation">variation<a class="headerlink" href="#variation" title="Permanent link">&para;</a></h3>
-<h4 id="sku">sku<a class="headerlink" href="#sku" title="Permanent link">&para;</a></h4>
-<h4 id="attribution">attribution<a class="headerlink" href="#attribution" title="Permanent link">&para;</a></h4>
-<h3 id="inventory">inventory<a class="headerlink" href="#inventory" title="Permanent link">&para;</a></h3>
+<h3 id="product"><code>product</code><a class="headerlink" href="#product" title="Permanent link">&para;</a></h3>
+<p>A <code>product</code> has <code>product_name</code>, <code>category</code>,<code>brand</code>, <code>identifier</code>(human managed product id if available). It may have one or multiple 
+<code>variations</code>.</p>
+<h3 id="variation"><code>variation</code><a class="headerlink" href="#variation" title="Permanent link">&para;</a></h3>
+<p>A <code>variation</code> must have a unique <code>sku</code> and a few attributes (e.g., <code>color</code>, <code>size</code>, <code>upc</code>, etc.) A <code>variation</code> may be published to multiple fronshops (with difference prices), e.g., wordpress, shopify, ebay, etc.</p>
+<p><strong>Notes: Shopify can support max 3 variation attributes (named as <code>options</code> in Shopify)</strong></p>
+<h3 id="inventory"><code>inventory</code><a class="headerlink" href="#inventory" title="Permanent link">&para;</a></h3>
+<p>Product <code>inventory</code> is mapped with sku. The same product could be purchased from serveral suppliers. It may be also mapped to <code>supplier_item_id</code> from suppliers' catalog.</p>
 <h2 id="shop-storefront">Shop (Storefront)<a class="headerlink" href="#shop-storefront" title="Permanent link">&para;</a></h2>
 <h3 id="front-shop">front shop<a class="headerlink" href="#front-shop" title="Permanent link">&para;</a></h3>
-<p>A <code>front shop</code> is the ecommerce site (or platform) where the products are published and sold (e.g., a Shopify store). The <code>front shop</code> is also a <code>destination</code> where the <code>variation</code> is published and sold.</p>
-<h3 id="destination">destination<a class="headerlink" href="#destination" title="Permanent link">&para;</a></h3>
-<h3 id="product_1">product<a class="headerlink" href="#product_1" title="Permanent link">&para;</a></h3>
-<p>A <code>product</code> may have multiple <code>variations</code>, and a <code>variation</code> may be published to multiple fronshops, e.g., wordpress, shopify, ebay, etc.</p>
+<p>A <code>front_shop</code> is the ecommerce site (or platform) where the products are published and sold (e.g., a Shopify store). The <code>front_shop</code> is also a <code>destination</code> where the <code>variation</code> is published and sold.</p>
+<h3 id="destination"><code>destination</code><a class="headerlink" href="#destination" title="Permanent link">&para;</a></h3>
+<p>A <code>variation</code> may be published to multiple fronshops (as <code>destination</code>). 
+The <code>destination</code> status could be deactivated, for example, if the <code>variation</code> is discontinued. The price could be updated over time at each <code>frontshop</code>.</p>
+<h3 id="destination_product_id"><code>destination_product_id</code><a class="headerlink" href="#destination_product_id" title="Permanent link">&para;</a></h3>
+<p>The original Product Id pulled through online store API. </p>
+<h3 id="destination_parent_id"><code>destination_parent_id</code><a class="headerlink" href="#destination_parent_id" title="Permanent link">&para;</a></h3>
+<p>For variations, <code>destination_parent_id</code> points to its parent product with online store API.</p>
+<h3 id="inventory_item_id-shopify-only"><code>inventory_item_id</code> (Shopify Only)<a class="headerlink" href="#inventory_item_id-shopify-only" title="Permanent link">&para;</a></h3>
+<p><code>inventory_item_id</code> is used to update inventory through Shopify API</p>
 <h2 id="order">Order<a class="headerlink" href="#order" title="Permanent link">&para;</a></h2>
-<h3 id="order-item">order item<a class="headerlink" href="#order-item" title="Permanent link">&para;</a></h3>
+<p><img alt="order" src="../../img/order.svg" width="400" /> </p>
+<h3 id="destination_order_id"><code>destination_order_id</code><a class="headerlink" href="#destination_order_id" title="Permanent link">&para;</a></h3>
+<p><code>destination_order_id</code> is the original Order Id pulled through online store API. </p>
+<h3 id="order-item"><code>order item</code><a class="headerlink" href="#order-item" title="Permanent link">&para;</a></h3>
+<p><code>order item</code> is the products on an order. It is mapped to <code>variation</code> with <code>sku</code></p>
 <h3 id="customer">customer<a class="headerlink" href="#customer" title="Permanent link">&para;</a></h3>
+<p><code>customer</code> has flags to indicate if it is for shipping, billing or both.</p>
 <h3 id="fulfillment">fulfillment<a class="headerlink" href="#fulfillment" title="Permanent link">&para;</a></h3>
-<h2 id="supplier">supplier<a class="headerlink" href="#supplier" title="Permanent link">&para;</a></h2>
+<p>Fulfillment infomation includes shipment <code>tracking id</code> and service <code>provider</code>.</p>
 
   <hr>
 <div class="md-source-file">
