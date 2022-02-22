@@ -15,7 +15,7 @@
     
     
       
-        <title>configuration - PyPipet Docs</title>
+        <title>project configuration - PyPipet Docs</title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              configuration
+              project configuration
             
           </span>
         </div>
@@ -520,6 +520,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -632,21 +646,57 @@
 <li><code>name</code> project_name</li>
 <li><code>home_dir</code> project folder, default <code>./</code></li>
 <li><code>databse_setting</code> path of database config file, default <code>bundle/db_setting.yaml</code></li>
-<li><code>wc_field_mapping</code> path of woocommerce mapping file, default <code>bundle/wc_field_mapping.yaml</code></li>
-<li><code>spf_field_mapping</code> path of Shopify REST API mapping file, default <code>bundle/spf_field_mapping.yaml</code></li>
+<li><code>wc_field_mapping</code> path of woocommerce mapping file, default <code>bundle/wc_field_mapping.yaml</code> (case sensitive)</li>
+<li><code>spf_field_mapping</code> path of Shopify REST API mapping file, default <code>bundle/spf_field_mapping.yaml</code>(case sensitive)</li>
 <li><code>file_template</code> path of template config file, default <code>bundle/file_template.yaml</code></li>
 <li><code>default_brand</code> default brand name</li>
 <li><code>attr_list</code>  list of product attributes in product feed (refer to database schema - table <code>variation</code>)</li>
-<li>variation_attrs: list of product attributes to define variations (a subset of <code>attr_list</code>)</li>
-<li><code>shop</code> <a href="/configuration/ecommerce_api/">ecommerce platform API settings</a></li>
+<li><code>variation_attrs</code>: list of product attributes to define variations (a subset of <code>attr_list</code>). Shopify allows three attributes (as <code>option</code>) max.</li>
+<li><code>shops</code> <a href="/configuration/ecommerce_api/">ecommerce platform API settings</a></li>
 </ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">project_setting</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pypipet project</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>  <span class="nt">home_dir</span><span class="p">:</span> <span class="s">&#39;./&#39;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>  <span class="nt">databse_setting</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle/db_setting.yaml</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>  <span class="nt">wc_field_mapping</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle/wc_field_mapping.yaml</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>  <span class="nt">spf_field_mapping</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle/spf_field_mapping.yaml</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>  <span class="nt">file_template</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">bundle/file_template.yaml</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>  <span class="nt">default_brand</span><span class="p">:</span> <span class="s">&#39;NA&#39;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>  <span class="nt">attr_list</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;brand&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;upc&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;size&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;color&#39;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>  <span class="nt">variation_attrs</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;color&#39;</span><span class="p p-Indicator">]</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>  <span class="nt">shops</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>    <span class="nt">home_site</span><span class="p">:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>      <span class="nt">site_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wc</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>      <span class="nt">url</span><span class="p">:</span> <span class="s">&#39;https://xxx.com&#39;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>      <span class="nt">consumer_key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ck_45b6</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>      <span class="nt">consumer_secret</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cs_fb1671aaf</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>      <span class="nt">version</span><span class="p">:</span> <span class="s">&#39;wc/v3&#39;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>      <span class="nt">no_of_retries</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">3</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>      <span class="nt">batch_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="nt">test_site</span><span class="p">:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>      <span class="nt">site_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">wc</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>      <span class="nt">url</span><span class="p">:</span> <span class="s">&#39;https://xxx.com&#39;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>      <span class="nt">consumer_key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ck_45b6</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>      <span class="nt">consumer_secret</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cs_fb1671aaf</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>      <span class="nt">version</span><span class="p">:</span> <span class="s">&#39;wc/v3&#39;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>      <span class="nt">no_of_retries</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">3</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>      <span class="nt">batch_size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>    <span class="nt">spf_site</span><span class="p">:</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>      <span class="nt">site_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">shopify</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>      <span class="nt">API_KEY</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">c341c45635623463</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>      <span class="nt">API_SECRET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">shpss_1caer345ersfar14c0</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a>      <span class="nt">private_app_password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">shppa_3fddgf3453efasdwe5dgasetadfae</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>      <span class="nt">access_token</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">iiuweuty94t7</span> <span class="c1"># non-private app</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>      <span class="nt">shop_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test_shop.myshopify.com</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a>      <span class="nt">api_version</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2022-01</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-02-17
+      2022-02-20
     
   </small>
 </div>
@@ -700,7 +750,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Pipet is licensed under the <a href=''>MIT license</a>
+      PyPipet is licensed under the <a href=''>MIT license</a>
     </div>
   
   
@@ -714,7 +764,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.cefbb252.min.js", "version": "0.0.1"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "content.code.annotate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.cefbb252.min.js", "version": "1.0.0"}</script>
     
     
       <script src="../../assets/javascripts/bundle.a5f8ea78.min.js"></script>

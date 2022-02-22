@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://pypipet.com/references/database/">
+        <link rel="canonical" href="https://pypipet.com/tutorials/dest_verification/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.5">
     
     
       
-        <title>PyPipet Database schema - PyPipet Docs</title>
+        <title>Dest verification - PyPipet Docs</title>
       
     
     
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#support-ecommerce-business-flow" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PyPipet Database schema
+              Dest verification
             
           </span>
         </div>
@@ -429,16 +424,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
@@ -461,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terms/" class="md-nav__link">
+      <a href="../../references/terms/" class="md-nav__link">
         Definition of Terms
       </a>
     </li>
@@ -473,55 +466,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Database schema
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../references/database/" class="md-nav__link">
         Database schema
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#support-ecommerce-business-flow" class="md-nav__link">
-    Support Ecommerce Business Flow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customize-schema" class="md-nav__link">
-    Customize Schema
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -533,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli/" class="md-nav__link">
+      <a href="../../references/cli/" class="md-nav__link">
         CLI
       </a>
     </li>
@@ -604,101 +553,19 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#support-ecommerce-business-flow" class="md-nav__link">
-    Support Ecommerce Business Flow
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customize-schema" class="md-nav__link">
-    Customize Schema
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/pypipet/pypipet.github.io.git/edit/master/docs/references/database.md" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/pypipet/pypipet.github.io.git/edit/master/docs/tutorials/dest_verification.md" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-  <h1>Database schema</h1>
+  <h1>Dest verification</h1>
 
-<p><code>bundle/db_setting.yaml</code></p>
-<h2 id="support-ecommerce-business-flow">Support Ecommerce Business Flow<a class="headerlink" href="#support-ecommerce-business-flow" title="Permanent link">&para;</a></h2>
-<p>Pypipet provides a light-weight database schema that is designed and customized to basic Ecommerce functionality, including catalog management, inventory update, product publish, order managment, fulfillment managemaent, etc. The schema is defined with an editable yaml file. You can find the definition of tables and columns here
-<strong><a href="/references/terms/">definitions of PyPipet Terms</a></strong>.</p>
-<p><img alt="PyPipet Schema" src="../../img/shema.png" /></p>
-<h2 id="customize-schema">Customize Schema<a class="headerlink" href="#customize-schema" title="Permanent link">&para;</a></h2>
-<p>Moreover, the schema can be customized based on ones own need. You can add 
-tables, or edit columns according to your business senario. For example retailers of different products may have a completely different set of attributes to define a product. </p>
-<p>Here are <a href="https://github.com/pypipet/pypipet/tree/main/configuration_examples">examples of setting files</a> for two types of business owners.</p>
-<p>Some of the tables and their columns are mandatory in Pypiet by default. Pypipet validates  the schema when the project is initiated.  </p>
-<ul>
-<li>mandatory tables and columns for validation <a href="https://github.com/pypipet/pypipet/blob/main/pypipet/core/config_service.py">source code</a>.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a> <span class="n">table_validation</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>        <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;full_path&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="s1">&#39;product&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;product_name&#39;</span><span class="p">,</span> <span class="s1">&#39;identifier&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="s1">&#39;front_shop&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;provider&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="s1">&#39;variation&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;sku&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span>  <span class="s1">&#39;product_id&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="s1">&#39;tax&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;country_code&#39;</span><span class="p">,</span> <span class="s1">&#39;default_rate&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;destination_product_id&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>                    <span class="s1">&#39;is_current_price&#39;</span><span class="p">,</span> <span class="s1">&#39;sku&#39;</span><span class="p">,</span> <span class="s1">&#39;front_shop_id&#39;</span><span class="p">,</span> <span class="s1">&#39;available&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="s1">&#39;inventory&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;sku&#39;</span><span class="p">,</span> <span class="s1">&#39;cost&#39;</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span><span class="p">,</span> <span class="s1">&#39;supplier_item_id&#39;</span><span class="p">,</span> <span class="s1">&#39;supplier_id&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>        <span class="s1">&#39;customer&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;first_name&#39;</span><span class="p">,</span><span class="s1">&#39;last_name&#39;</span><span class="p">,</span><span class="s1">&#39;phone&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;address1&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>                    <span class="s1">&#39;address2&#39;</span><span class="p">,</span> <span class="s1">&#39;country&#39;</span><span class="p">,</span> <span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;postcode&#39;</span><span class="p">,</span> 
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>                    <span class="s1">&#39;is_shipping&#39;</span><span class="p">,</span> <span class="s1">&#39;is_billing&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>        <span class="s1">&#39;shop_order&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;destination_order_id&#39;</span><span class="p">,</span> <span class="s1">&#39;front_shop_id&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>                     <span class="s1">&#39;billing_customer_id&#39;</span><span class="p">,</span><span class="s1">&#39;shipping_customer_id&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>                     <span class="s1">&#39;payment_type&#39;</span><span class="p">,</span><span class="s1">&#39;payment_token&#39;</span><span class="p">,</span> <span class="s1">&#39;refund&#39;</span><span class="p">,</span> <span class="s1">&#39;shipping_cost&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>                     <span class="s1">&#39;shipping_tax_id&#39;</span><span class="p">,</span> <span class="s1">&#39;order_total&#39;</span><span class="p">,</span><span class="s1">&#39;order_at&#39;</span><span class="p">,</span><span class="s1">&#39;currency&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>        <span class="s1">&#39;order_item&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;shop_order_id&#39;</span><span class="p">,</span> <span class="s1">&#39;destination_id&#39;</span><span class="p">,</span><span class="s1">&#39;destination_product_id&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>                      <span class="s1">&#39;tax_id&#39;</span><span class="p">,</span> <span class="s1">&#39;order_qty&#39;</span><span class="p">,</span> <span class="s1">&#39;ship_qty&#39;</span><span class="p">],</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a>        <span class="s1">&#39;fulfillment&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;provider&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;dimension&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">,</span> 
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>                      <span class="s1">&#39;tracking_id&#39;</span><span class="p">,</span> <span class="s1">&#39;shop_order_id&#39;</span><span class="p">,</span> <span class="s1">&#39;destination_order_id&#39;</span><span class="p">]</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="p">}</span>
-</code></pre></div>
 
-  <hr>
-<div class="md-source-file">
-  <small>
-    
-      Last update:
-      2022-02-19
-    
-  </small>
-</div>
 
               
             </article>
@@ -708,41 +575,6 @@ tables, or edit columns according to your business senario. For example retailer
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../terms/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Definition of Terms" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Definition of Terms
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../cli/" class="md-footer__link md-footer__link--next" aria-label="Next: CLI" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              CLI
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
