@@ -43,16 +43,6 @@
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
-
-
-  
-  
-
-
-  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-LW5HH8FPCB"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-LW5HH8FPCB",{page_path:e.pathname})})})</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW5HH8FPCB"></script>
-
 
     
     
@@ -968,12 +958,62 @@
       
       
         <label class="md-nav__link" for="__nav_7">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/shopify_auth/" class="md-nav__link">
+        Shopify Auth
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
           Use Cases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Use Cases" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Use Cases
         </label>
@@ -1582,7 +1622,7 @@ pypipet inventory show --sku 223344
 <div class="highlight"><pre><span></span><code>pypipet order {sync|status|show} [OPTIONS]
 </code></pre></div>
 <h4 id="descritpion_5">Descritpion<a class="headerlink" href="#descritpion_5" title="Permanent link">&para;</a></h4>
-<p>pull and edit order info.<code>pypipet</code> support order actions: <code>sync</code>, <code>status</code>, <code>show</code>. If update order status manually, the order status (flag <code>manual</code>) has to be included. <code>pypipet</code> accepts values of order status: <code>refunded</code>, <code>completed</code>, <code>processing</code>, <code>shipped</code>, <code>ready-to-ship</code>, <code>cancelled</code>.
+<p>pull and edit order info.<code>pypipet</code> support order actions: <code>sync</code>, <code>status</code>, <code>show</code>. If update order status manually, the order status (flag <code>manual</code>) has to be included. <code>pypipet</code> accepts values of order status: <code>refunded</code>, <code>completed</code>, <code>processing</code>, <code>shipped</code>, <code>ready-to-ship</code>, <code>cancelled</code>. if action <code>status</code> does not have flag <code>manual</code>, <code>pypipet</code> pulls status from store API and pushes to database to update.
 Order-id is the id from shop API (see <a href="https://woocommerce.github.io/woocommerce-rest-api-docs/#orders">woocommerce order <code>id</code></a>, <a href="https://shopify.dev/api/admin-rest/2022-01/resources/order#[get]/admin/api/2022-01/orders/{order_id}.json">shopify <code>order_id</code></a>).</p>
 <h4 id="options_5">Options<a class="headerlink" href="#options_5" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code>--shop TEXT                     frontshop name (in `setting.yaml` -&gt; `shop`)
@@ -1710,13 +1750,13 @@ pypipet static show --target tax
       
       
         
-        <a href="../../usecases/usecases/" class="md-footer__link md-footer__link--next" aria-label="Next: Use cases" rel="next">
+        <a href="../../tutorials/shopify_auth/" class="md-footer__link md-footer__link--next" aria-label="Next: Shopify Auth" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Use cases
+              Shopify Auth
             </div>
           </div>
           <div class="md-footer__button md-icon">
